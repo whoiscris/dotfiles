@@ -23,3 +23,5 @@ set nowrap                " don't wrap text
 
 " Autocomplete for PHP
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+set completeopt=longest,menuone
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
