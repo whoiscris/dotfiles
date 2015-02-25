@@ -9,8 +9,8 @@ if [ "$0" != "$SCRIPT_PATH" ] && [ "" != "$SCRIPT_PATH" ]; then
     cd $SCRIPT_PATH
 fi
 
-VIM_INSTALLED=`vim --version`
-if [[ $VIM_INSTALLED == *"command not found"* ]]; then
+VIM_INSTALLED=`whereis vim | cut --delimiter=: --fields=2`
+if [[ $VIM_INSTALLED == "" ]]; then
     echo "install vim ..."
     exit 1
 fi
