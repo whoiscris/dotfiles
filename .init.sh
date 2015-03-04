@@ -5,12 +5,14 @@ set -e
 
 # set directory to current directory of script
 SCRIPT_PATH=${0%/*}
-if [ "$0" != "$SCRIPT_PATH" ] && [ "" != "$SCRIPT_PATH" ]; then
+if [[ "$0" != "$SCRIPT_PATH" ]] && [[ "" != "$SCRIPT_PATH" ]]
+then
     cd $SCRIPT_PATH
 fi
 
 VIM_INSTALLED=`whereis vim | cut --delimiter=: --fields=2`
-if [[ $VIM_INSTALLED == "" ]]; then
+if [[ "$VIM_INSTALLED" == "" ]] || [[ "$VIM_INSTALLED" != *"/usr/bin/vim"* ]]
+then
     echo "install vim ..."
     exit 1
 fi
