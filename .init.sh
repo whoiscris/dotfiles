@@ -10,12 +10,7 @@ then
     cd $SCRIPT_PATH
 fi
 
-VIM_INSTALLED=`whereis vim | cut --delimiter=: --fields=2`
-if [[ "$VIM_INSTALLED" == "" ]] || [[ "$VIM_INSTALLED" != *"/usr/bin/vim"* ]]
-then
-    echo "install vim ..."
-    exit 1
-fi
+sudo /bin/bash .apt-get.sh
 
 # get git submodules for this repository too.
 echo "getting git submodules ..."
