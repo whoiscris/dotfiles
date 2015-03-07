@@ -14,4 +14,10 @@ sudo apt-get install -y \
     curl \
     git \
     sublime-text-installer \
-    spotify-client-qt
+    spotify-client-qt \
+    python3.4 \
+    python3.4-dev \
+    python-dev \
+    python-pip
+
+
